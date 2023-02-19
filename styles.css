@@ -1,0 +1,175 @@
+/* Reset */
+*, *::after, *::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* border: 1px solid red; */
+}
+
+/* general styles */
+body{
+    font-size: 15px;
+    font-family: 'Inter', sans-serif;
+    background-color: hsl(36, 100%, 99%);
+    line-height: 1.5em;
+}
+
+nav{
+    justify-content: space-between;
+}
+
+nav li{
+    list-style-type: none;
+    margin-left: 2em;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.d-flex{
+    display: flex;
+}
+
+h1{
+    font-size: 3em;
+    font-weight: 800;
+    line-height: 1em;
+}
+
+.container{
+    margin:10% auto;
+    max-width: 23em;
+    display: grid;
+    gap: 1.5em;
+    grid-auto-columns: 1fr;
+  grid-template-areas:
+   'one'
+   'two'
+   'three'
+   'four'
+   'five';
+}
+
+.section:nth-child(1) {
+  grid-area: one;
+}
+.section:nth-child(2) {
+  grid-area: two;
+}
+.section:nth-child(3) {
+  grid-area: three;
+}
+.section:nth-child(4) {
+  grid-area: four;
+}
+.section:nth-child(5) {
+  grid-area: five;
+}
+
+picture img{
+ width: 23em;
+}
+
+.intro p{
+    color:  hsl(236, 13%, 42%);
+}
+
+.intro button{
+    width: 13em;
+    height: 3.5em;
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+    background-color:  hsl(5, 85%, 63%);
+    color:hsl(36, 100%, 99%);
+    font-family: inherit;
+    font-weight: 700;
+    padding: 1em 1.5em;
+    border: none;
+    margin-block: 2em 3.5em;
+    cursor: pointer;
+}
+
+.intro button:hover{
+    background-color: hsl(240, 100%, 5%);
+    transition: 0.3s;
+}
+
+.new{
+    background-color: hsl(240, 100%, 5%);
+    color: hsl(36, 100%, 99%);
+    padding: 1em;
+}
+
+.new h2{
+    color: hsl(35, 77%, 62%);
+    font-size:1.7em;
+    margin-bottom: 1.5em;
+}
+
+.new h4{
+    font-size: 1em;
+    margin-block: 1.5em 0.3em;
+}
+
+.new h4:hover{
+    color:hsl(35, 77%, 62%);
+}
+
+.new p{
+    padding-bottom: 1.5em;
+    border-bottom: 0.5px solid;
+    color: hsl(236, 13%, 42%);
+    font-size: 0.9em;
+    font-weight: 700;
+}
+
+.new p:last-of-type{
+    border: none;
+}
+
+.sub-section{
+    align-items: center;
+    margin-block: 2em;
+}
+
+.sub-section img{
+    height: 8em;
+    margin-right: 1.5em;
+}
+
+.sub-section h2{
+    color: hsl(233, 8%, 79%);
+    font-size: 2em;
+    margin-bottom: 0.5em;
+}
+
+.sub-section h4{
+    margin-bottom: 0.3em;
+}
+
+.sub-section h4:hover, nav li:hover{
+    color: hsl(5, 85%, 63%);
+}
+
+.sub-section p{
+    color: hsl(236, 13%, 42%);
+}
+
+
+/* Responsiveness for desktop */
+@media screen and (min-width: 800px){
+
+    .container{
+        width: 70vw;
+        grid-template-areas:
+        "one one four"
+        "two three four"
+        "five five five";
+    }
+
+    .section:nth-child(5){
+        display: flex;
+    }
+}
