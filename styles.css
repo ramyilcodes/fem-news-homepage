@@ -18,9 +18,17 @@ header{
     height:5em;
 }
 
+nav {
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav .hamburger{
+    position: relative;
+    right: -8em;
+}
 nav li{
-    list-style-type: none;
-    margin-left: 2em;
+    display: none;
 }
 
 a{
@@ -178,6 +186,15 @@ picture img{
     justify-content: space-between;
 }
 
+nav li{
+    list-style-type: none;
+    margin-left: 2em;
+    display: block;
+}
+
+nav .hamburger{
+    display: none;
+}
     picture{
         height:271px;
     }
@@ -196,5 +213,5 @@ picture img{
         display: flex;
         justify-content: space-evenly;
     }
-    
+
 }
