@@ -14,8 +14,8 @@ body{
     line-height: 1.5em;
 }
 
-nav{
-    justify-content: space-between;
+header{
+    height:5em;
 }
 
 nav li{
@@ -39,8 +39,8 @@ h1{
 }
 
 .container{
-    margin:10% auto;
-    max-width: 23em;
+    margin:3% auto;
+    width: 23em;
     display: grid;
     gap: 1.5em;
     grid-auto-columns: 1fr;
@@ -159,17 +159,42 @@ picture img{
 
 
 /* Responsiveness for desktop */
-@media screen and (min-width: 800px){
+@media screen and (min-width: 72em){
 
     .container{
-        width: 70vw;
+        margin:5% auto;
+        width: 65em;
         grid-template-areas:
         "one one four"
         "two three four"
         "five five five";
     }
 
+    header{
+    height:1em;
+}
+    nav{
+    width: inherit;
+    justify-content: space-between;
+}
+
+    picture{
+        height:271px;
+    }
+
+    picture img{
+        width:42.5em; 
+    }
+
+    .new{
+        padding: 2em;
+    }
+    .new h2{
+        margin-bottom: 0.5em;
+    }
     .section:nth-child(5){
         display: flex;
+        justify-content: space-evenly;
     }
+    
 }
