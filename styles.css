@@ -28,7 +28,11 @@ nav .hamburger{
     right: -8em;
 }
 nav li{
+    list-style-type: none;
     display: none;
+}
+nav ul{
+    flex-direction: column;
 }
 
 a{
@@ -165,9 +169,24 @@ picture img{
     color: hsl(236, 13%, 42%);
 }
 
+@media screen and (min-width: 50rem) {
+    .container{
+        width: 40em;
+    }
+
+    picture img {
+        width: 40em;
+    }
+
+    nav .hamburger{
+    position: relative;
+    right: -16em;
+}
+
+}
 
 /* Responsiveness for desktop */
-@media screen and (min-width: 72em){
+@media screen and (min-width: 72rem){
 
     .container{
         margin:5% auto;
@@ -185,9 +204,11 @@ picture img{
     width: inherit;
     justify-content: space-between;
 }
+nav ul{
+    flex-direction: row;
+}
 
 nav li{
-    list-style-type: none;
     margin-left: 2em;
     display: block;
 }
@@ -215,3 +236,4 @@ nav .hamburger{
     }
 
 }
+
